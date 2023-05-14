@@ -1,5 +1,5 @@
 type: intersection
 files:
   - "result/bert/spans-pred-original_test.txt"
-  - "result/preds/spans-pred-original_test.txt"
+  - "result/spans/spans-pred-original_test.txt"
 path: "result/combine/bert_CRF_LSTM_INTER_SPAN.txt"
