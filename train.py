@@ -110,26 +110,7 @@ tokenized_test_dataset = dataset.test_tokenized_inputs
 
 model_class = configmapper.get_object("models", train_config.model_name)
 
-if "toxic-bert" in train_config.pretrained_args.pretrained_model_name_or_path:
-    toxicbert_model = AutoModelForSequenceClassification.from_pretrained(
-        train_config.pretrained_args.pretrained_model_name_or_path
-    )
-    train_config.pretrained_args.pretrained_model_name_or_path = "bert-base-uncased"
-    model = model_class.from_pretrained(**train_config.pretrained_args)
-    model.bert = deepcopy(toxicbert_model.bert)
-    gc.collect()
-
-elif "toxic-roberta" in train_config.pretrained_args.pretrained_model_name_or_path:
-    toxicroberta_model = AutoModelForSequenceClassification.from_pretrained(
-        train_config.pretrained_args.pretrained_model_name_or_path
-    )
-    train_config.pretrained_args.pretrained_model_name_or_path = "roberta-base"
-    model = model_class.from_pretrained(**train_config.pretrained_args)
-    model.roberta = deepcopy(toxicroberta_model.roberta)
-    gc.collect()
-
-else:
-    model = model_class.from_pretrained(**train_config.pretrained_args)
+model = model_class.from_pretrained(**train_config.pretrained_args)
 
 tokenizer = AutoTokenizer.from_pretrained(data_config.model_checkpoint_name)
 if "crf" in train_config.model_name:
@@ -145,13 +126,7 @@ else:
     data_collator = default_data_collator
     compute_metrics = None
 
-## Need to place data_collator
-if "multi" in train_config.model_name:
-    args = TrainingArguments(
-        label_names=["start_positions", "end_positions"], **train_config.args
-    )
-else:
-    args = TrainingArguments(**train_config.args)
+args = TrainingArguments(**train_config.args)
 
 if not os.path.exists(train_config.args.output_dir):
     os.makedirs(train_config.args.output_dir)
