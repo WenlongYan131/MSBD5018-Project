@@ -1,5 +1,5 @@
 type: union
 files:
-  - "/result/roberta/spans-pred-original_test.txt"
-  - "/result/spans/spans-pred-original_test.txt"
-path: "/result/combine/UNION_SPAN_robert.txt"
+  - "result/roberta/spans-pred-original_test.txt"
+  - "result/spans/spans-pred-original_test.txt"
+path: "result/combine/UNION_SPAN_robert.txt"
