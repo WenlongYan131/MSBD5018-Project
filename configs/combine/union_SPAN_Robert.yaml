@@ -1,5 +1,5 @@
 type: union
 files:
-  - "/content/drive/MyDrive/ToxicSpans/results/fixed/bert_base_spans/preds/spans-pred-original_test.txt"
-  - "/content/drive/MyDrive/ToxicSpans/results/fixed/bert_base_spans/roberta/spans-pred-original_test.txt"
-path: "/content/drive/MyDrive/ToxicSpans/results/fixed/bert_base_spans/UNION_SPAN_robert.txt"
+  - "/result/roberta/spans-pred-original_test.txt"
+  - "/result/spans/spans-pred-original_test.txt"
+path: "/result/combine/UNION_SPAN_robert.txt"
