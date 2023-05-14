@@ -1,0 +1,5 @@
+type: intersection
+files:
+  - "/content/drive/MyDrive/ToxicSpans/results/fixed/bert_base_spans/bert/spans-pred-original_test.txt"
+  - "/content/drive/MyDrive/ToxicSpans/results/fixed/bert_base_spans/roberta/spans-pred-original_test.txt"
+path: "/content/drive/MyDrive/ToxicSpans/results/fixed/bert_base_spans/INTER_CRF_roberta.txt"
