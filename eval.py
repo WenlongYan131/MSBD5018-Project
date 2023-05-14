@@ -25,7 +25,6 @@ from src.utils.configuration import Config
 from src.datasets import *
 from src.models import *
 
-from src.modules.preprocessors import *
 from src.utils.mapper import configmapper
 from src.utils.postprocess_predictions import (
     postprocess_token_span_predictions,

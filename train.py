@@ -31,7 +31,6 @@ from src.utils.configuration import Config
 from src.datasets import *
 from src.models import *
 
-from src.modules.preprocessors import *
 from src.utils.mapper import configmapper
 
 import os
