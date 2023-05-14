@@ -1,6 +1,6 @@
 type: intersection
 
 files:
-  - "/result/roberta/spans-pred-original_test.txt"
-  - "/result/spans/spans-pred-original_test.txt"
-path: "/result/combine/INTER_roberta_SPAN.txt"
+  - "result/roberta/spans-pred-original_test.txt"
+  - "result/spans/spans-pred-original_test.txt"
+path: "result/combine/INTER_roberta_SPAN.txt"
